@@ -122,3 +122,9 @@ class BinaryHeap(object):
         # Sort the heap
         for i in range(int(math.floor(self.size/2)),1,-1):
             self.down_heap(i)
+            
+    def priority_to_experience(self,priority_ids):
+        '''
+        Retrieve experience IDs by priority IDs
+        '''
+        return [self.p2e[i] for i in priority_ids]
