@@ -90,7 +90,7 @@ class BinaryHeap(object):
             if greatest != i:                     # If a children is larger
                 self._swap_positions(i,greatest)
                 # Percolating down the new child (previous parent)
-                elf.down_heap(greatest)
+                self.down_heap(greatest)
             
     def _swap_positions(self,parent,child):
         tmp = self.priority_queue[child]
