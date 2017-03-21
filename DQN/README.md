@@ -18,4 +18,4 @@ The model was trained and tested on a machine with:
 
 The model was trained for almost 7 days.
 
-![results]()
+![results](https://github.com/camigord/OpenAI_ReinforcementLearning/blob/master/DQN/assets/results.png)
