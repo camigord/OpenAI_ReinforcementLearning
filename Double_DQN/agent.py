@@ -98,7 +98,7 @@ class Agent():
             acted_Q = tf.reduce_sum(Q * action_one_hot, reduction_indices=1, name='DQN_acted')
 
             # *** Double Q-Learning ***
-            target_action = tf.argmax(self.DoubleQT, axis=1)
+            target_action = tf.argmax(self.DoubleQT, dimension=1)
             target_action_one_hot = tf.one_hot(target_action, self.num_actions, 1., 0., name='target_action_one_hot')
             DoubleQT_acted = tf.reduce_sum(self.QT * target_action_one_hot, axis=1, name='DoubleQT')
             Y = reward + self.gamma * DoubleQT_acted * (1 - terminal)
