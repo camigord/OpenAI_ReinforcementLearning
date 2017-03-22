@@ -113,7 +113,6 @@ class Agent():
             tf.scalar_summary('losses/loss_max', tf.reduce_max(loss_batch),collections=[Collection + '_summaries'])
             tf.scalar_summary('main/Y_0', Y[0], collections=[Collection + '_summaries'])
             tf.scalar_summary('main/Y_max', tf.reduce_max(Y), collections=[Collection + '_summaries'])
-            tf.scalar_summary('main/QT_max_action_0', QT_max_action[0], collections=[Collection + '_summaries'])
             tf.scalar_summary('main/acted_Q_0', acted_Q[0], collections=[Collection + '_summaries'])
             tf.scalar_summary('main/acted_Q_max', tf.reduce_max(acted_Q), collections=[Collection + '_summaries'])
             tf.scalar_summary('main/reward_max', tf.reduce_max(reward), collections=[Collection + '_summaries'])
